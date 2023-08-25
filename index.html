@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alhan - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style></style>
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #001C30;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background-color: #032339;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: lavender;
+            font-size: 0.9rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #576498;
+            height: 1.2px;
+            margin: 40px 87px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 155px 0;
+
+        }
+
+        .leftSection {
+            font-size: 3rem;
+
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+
+        }
+
+        .rightSection img {
+            width: 80%;
+
+
+        }
+
+        .firstSection>div {
+            width: 40%;
+        }
+
+        .purple {
+            color: rgb(151, 151, 223);
+
+        }
+
+        #element {
+            color: rgb(151, 151, 223);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        #menu-icon {
+            font-size: 3.6rem;
+            color: var(--text-color);
+            cursor: pointer;
+            display: none;
+        }
+
+        .social {
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .social a {
+            font-size: 20px;
+            display: inline-block;
+            color: whitesmoke;
+            border: 1px solid beige;
+            width: 25px;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        .social a:hover {
+            background-color: antiquewhite;
+        }
+
+        #Copyright {
+            text-align: center;
+            font-size: 15px;
+            padding-bottom: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .footer {
+            background-color: rgb(7, 7, 39);
+
+        }
+
+        .fourSection h1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero {
+            width: 100%;
+            height: 73vh;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            width: 90%;
+            max-width: 600px;
+            align-items: center
+        }
+
+        .input-group {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            outline: 0;
+            border: 1px solid #fff;
+            color: #fff;
+            background: transparent;
+            font-size: 15px;
+        }
+
+        label {
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 10px;
+            color: #fff;
+            cursor: text;
+            transition: 0.2s;
+        }
+
+        button {
+            padding: 10px 0;
+            color: #fff;
+            outline: none;
+            background: transparent;
+            border: 1px solid #fff;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .leftSection.button{
+            padding: 50px 0;
+        }
+        .leftSection .btn {
+            border-radius: 6px;
+            padding: 12px;
+            background-color: #001c30;
+            color: white;
+            border: 2px solid white;
+            width: 30%;
+        }
+
+        input:focus~label,
+        input:valid~label,
+        textarea:valid~label {
+            top: -35px;
+            font-size: 14px;
+        }
+
+        .secondSection p {
+            font-size: 1.3rem;
+        }
+
+        .secondSection h1 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .thirdSection {
+            text-align: center;
+            margin: 30px 60px;
+            height: 50vh;
+            padding-bottom: 5vh;
+            padding-top: 1vh;
+            padding-left: 10vh;
+        }
+
+        .thirdSection h1 {
+            padding-bottom: 5vh;
+        }
+
+        .paragraph {
+            text-align: justify;
+            margin: 30px 0px;
+            font-size: 18px;
+        }
+
+        .mianDiv {
+            width: 90%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .mianDiv img {
+            display: inline-block;
+            width: 50%;
+
+        }
+
+        .bar {
+            margin-bottom: 20px;
+        }
+
+        .child2 .info {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 10px;
+        }
+
+        .child2 .info span {
+            display: float;
+            padding-right: 7em;
+            justify-content: space-between;
+            /* justify-content: space-between; */
+            font-weight: 500;
+            font-size: 18px;
+        }
+
+        .line {
+            height: 5px;
+
+            background: lightgrey;
+        }
+
+        #html1 {
+            width: 52%;
+        }
+
+        #css1 {
+            width: 37%;
+        }
+
+        #js1 {
+            width: 31%;
+        }
+
+        #java1 {
+            width: 40%;
+        }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/37d9dcc306.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav id="home">
+            <div class="lefft">Alhan's Portfolio</div>
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">SKILL</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">ALHAN ALAM </span>
+                <div> I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn">DOWNLOAD RESUME</button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bgm.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection" id="about">
+            <h1 class="H1">ABOUT ME</h1>
+            <div>
+                <p>
+                    I am MD ALHAN ALAM Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi totam aut aliquam
+                    temporibus iure
+                    eos, cumque reiciendis voluptatibus? Minus ullam voluptate quisquam numquam, saepe soluta delectus
+                    iste molestias obcaecati vel. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, magni
+                    minus? Est iusto dolore eum laboriosam modi, ratione rem eius debitis quis repellendus officiis
+                    doloribus vel totam deserunt aliquid dolorum. Lorem ipsum dolor, sit amet consectetur adipisicing
+                    elit. Ipsam harum minus a eum, fuga in vitae voluptatem dicta! Perferendis earum dolores sunt qui
+                    libero aut ratione, quaerat velit culpa laboriosam.
+                </p>
+            </div>
+        </section>
+
+        <hr class="otherHr" id="skillmargin">
+        <section class="thirdSection" id="skills">
+
+            <h1 class="H1">My skills</h1>
+
+
+
+            <div class="mianDiv">
+                <div class="child1"> <img src="skills.png" alt=""> </div>
+                <div class="child2">
+                    <div class="bar">
+                        <div class="info">
+                            <span>HTML</span>
+                            <span>90%</span>
+                        </div>
+                    </div>
+                    <div class="line" id="html1"></div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>CSS</span>
+                            <span>60%</span>
+                        </div>
+                    </div>
+                    <div class="line" id="css1"></div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>JavaScript</span>
+                            <span>50%</span>
+                        </div>
+                    </div>
+                    <div class="line" id="js1"></div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>JAVA</span>
+                            <span>70%</span>
+                        </div>
+                    </div>
+                    <div class="line" id="java1"></div>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+        <section class="fourSection" id="contact">
+            <h1 id="heading">Contact Me</h1>
+
+
+
+
+
+            <div class="hero">
+                <form action="">
+                    <div class="input-group">
+                        <input type="text" id="name" required>
+                        <label for="name"><i class="fa-solid fa-user"></i> Your Name</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="number" required>
+                        <label for="number"><i class="fa-solid fa-square-phone"></i> Phone No.</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required>
+                        <label for="email"><i class="fas fa-envelope"></i> Email Id</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="massage" rows="8" required></textarea>
+                        <label for="massage"><i class="fas fa-comments"></i> Your Message</label>
+                    </div>
+                    <button type="submit">Submit <i class="fas fa-paper-plane"></i></button>
+
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="social">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p id="Copyright">Copyright @2023 all right reserved by Alhan</p>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['WEB DEVELOPER', 'UI/UX DESIGNER'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
